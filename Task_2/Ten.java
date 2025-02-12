@@ -1,20 +1,27 @@
-
-import java.util.Scanner;
-
 public class Ten {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        String str = "I love India";
+        System.out.println(reverse(str));
 
-        String str = sc.nextLine();
 
-        int  c = str.charAt(0);
-        if ( (c >= 65 && c <= 90) || (c >= 97 && c <= 122)) {
-            System.out.println("ALphabet");
-
-        }
-        else {
-            System.out.println("not alphabet");
-        }
     }
+
+    public static String reverse(String str) {
+        // sep = " ";
+        // String[] st = str.split(" ");
+        if ( str.length() == 0 ) {
+            return str;
+        }
+        int ind = str.indexOf(" ");
+        if ( ind == -1) {
+            return str;
+        }
+
+        String first_s = str.substring(0,ind);
+        str = str.substring(ind+1); 
+        return reverse(str) +" "+ first_s;
+        
+    }
+        
     
 }

@@ -3,8 +3,8 @@
 // Example 1:  input : X
 // Output : XYZ
 // Example 2:  Input : M
-// Output : MNOPQRSTUWXYZ
-package zoho.Task_2;
+// Output : MNOPQRSTUWXYZ 
+// package zoho.Task_2;
 
 import java.util.Scanner;
 
