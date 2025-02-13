@@ -1,42 +1,23 @@
 
-import java.util.Scanner;
-
+package zoho.Task_2;
 public class Twenty_one {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        // for ( int row = n ; row > 0; row--) {
-        //     System.out.println();
-        //     for ( int col1 = row-1; col1 > 1; col1--) {
-        //         System.out.print(" ");
-        //     }
-        //     for ( int col2 = row - col; col2 < row; col2++) {
-        //         System.out.print(row - col2);
-        //     }
-        //     for ( int col3 = 1; col3 < row; col3++) {
-        //         System.out.print(row - col3);
-        //     }
-        // }
+        int n = 9; 
 
-        for (int row = n; row >= 1; row--) {
-            // Print leading spaces
-            for (int col1 = row ; col1 <= n; col1++) {
-                System.out.print(" ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print("  ");
             }
-            
-            // Print the first sequence of numbers
-            for (int col2 = 1; col2 <= row; col2++) {
-                System.out.print(row - col2);
+
+            for (int j = n - i; j <= n; j++) {
+                System.out.print(j + " ");
             }
-            
-            // Print the second sequence of numbers
-            for (int col3 = 1; col3 < row; col3++) {
-                System.out.print(row - col3);
+
+            for (int j = n - 1; j >= n - i; j--) {
+                System.out.print(j + " ");
             }
-            
-            // Move to the next line after each row
-            System.out.println();
+
+            System.out.println(); 
         }
     }
-
 }
